@@ -12,6 +12,11 @@ ul{
 li{
     display: inline-block;
 }
+.game
+{
+    width:350px;
+    background-color: yellow;
+}
 .block
 {
     display: inline-block;
