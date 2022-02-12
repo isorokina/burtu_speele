@@ -16,35 +16,62 @@
             
             <ul>
                 <li>
-                    <a href="spele.html">
-                    Spēle
+                    <a href="speele.html">
+                    Burtu spēle
                 </a>
                 </li>
                 <li>
-                    <a href="pspele.html">
-                    Pielāgota spēle
+                    <a href="noteikumi.html">
+                    Noteikumi
 
                 </a>
                 </li>
                 <li>
-                    <a href="tops.html">
-                    TOPs
+                    <a href="rezultaati.html">
+                    Rezultāti
+                     </a>
+                </li>
+                <li>
+                    <a href="veidotaaji.html">
+                    Veidotāji
                      </a>
                 </li>
 
             </ul>
-        </div>
+        </div><!--beidzās header-->
         <div class="content">
-            <p>Noteikumi</p>
-            <div class="game">
-                <div class="block">A</div>
-                <div class="block">B</div>
-                <div class="block">C</div>
-                <div class="block">D</div>
-                <div class="block">E</div>
-                <div class="block">F</div>
-            </div>
+            <h3 class="virsraksts">Spēlētais</h3>
+            Vārds:<input id="vaards"/>
+            <br/>
+            Vecums:<input id="vecums"/>
+            <br/>
+            Reģions:
+            <select id="regions">
+                <option value="Vidzeme"> Vidzeme</option>
+                <option value="Latgale"> Latgale</option>
+                <option value="Zemgale"> Zemgale</option>
+                <option value="Kurzeme"> Kurzeme</option>
+            </select>
+            <button onclick-"saaktSpeeli()">Sākt spēli</button>
         </div>
-    </div>
+    </div><!--beidzās wrapper-->
+
+<script>
+    function saaktSpeeli()
+    {
+        let vaards=document.querySelector('#vaards').value
+        let vecums=document.querySelector('#vecums').value
+        let regions=document.querySelector('#regions').value
+        console.log(vaards)
+        if(vaards=='')
+        {
+            alert('Ievadi vārdu!')
+        }
+        else{
+            window.location='speele.html#'+vaards
+        }
+    }//beidzās saaktSpeeli
+//document.querySelector('.virsraksts').innerHTML='Vārds:'+vaards+','+vecums+','+regions //konkrēta cilvēka ieraksts
+</script>
 </body>
 </html>
