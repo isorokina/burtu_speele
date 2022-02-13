@@ -52,6 +52,12 @@
                 <option value="Zemgale"> Zemgale</option>
                 <option value="Kurzeme"> Kurzeme</option>
             </select>
+            <br/>
+
+            <h3 class="virsraksts2">Ievadiet burtu skaitu vārdā</h3>
+            
+            Burtu skaits:<input id="burti"/>
+            <br/>
             <button onclick-"saaktSpeeli()">Sākt spēli</button>
         </div>
     </div><!--beidzās wrapper-->
@@ -62,12 +68,25 @@
         let vaards=document.querySelector('#vaards').value
         let vecums=document.querySelector('#vecums').value
         let regions=document.querySelector('#regions').value
+        let burti=document.querySelector('#burti').value
         console.log(vaards)
         if(vaards=='')
         {
             alert('Ievadi vārdu!')
         }
         else{
+            window.location='speele.html#'+vaards
+        }
+        if(burti=='')
+        {
+            alert('Ievadi burtu skaitu!')
+        }
+        else{
+            do {
+                  i += 1;
+                  console.log(i);
+                  } 
+            while (i < burti);
             window.location='speele.html#'+vaards
         }
     }//beidzās saaktSpeeli
