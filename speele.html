@@ -39,17 +39,53 @@
 
             </ul>
         </div>
+       
         <div class="content">
             <h3 class="virsraksts">Sveiks</h3>
-            <div class="game">
-                <div class="block" id="L0">A</div>
-                <div class="block" id="L1">B</div>
-                <div class="block" id="L2">C</div>
-                <div class="block" id="L3">D</div>
-                <div class="block" id="L4">E</div>
-                <div class="block" id="L5">F</div>
-            </div>
+            Ievadiet vārdu:<input id="vaards2"/>
+            <br/>
         </div>
     </div>
+
+
+    <script>
+        function vaarda_ievade()
+        {
+            let vaards2=document.querySelector('#vaards2').value
+            console.log(vaards2)
+            if(vaards=='')
+            {
+                alert('Ievadi vārdu!')
+            }
+            else{
+                window.location='speele.html#'+vaards
+            }
+            if(burti=='')
+            {
+                alert('Ievadi burtu skaitu!')
+            }
+            else{
+                do {
+                      i += 1;
+                      console.log(i);
+                      } 
+                while (i < burti);
+                window.location='speele.html#'+vaards
+            }
+        }//beidzās saaktSpeeli
+    //document.querySelector('.virsraksts').innerHTML='Vārds:'+vaards+','+vecums+','+regions //konkrēta cilvēka ieraksts
+    var pieci=['kaķis','skola','ciems','bilde','lapsa','lācis','vilks', 'putns', 'glāze', 'krūze', 'torte']
+    var sesi=['lakats','vāvere','rinkis','vasara','priede','kafija','ķirbis', 'durvis']
+    var septini=['pilsēta','plaukts','numurs','burkāni','lineāls','ārzemes','grāmata']
+    var astoni=['pulveris','aploksne','rokturis','austiņas','kabinets','tālrunis','traktors']
+    var rand5=Math.floor(Math.random()*((pieci.length -1)+1))
+    var arr5=str.split('')
+    var rand6=Math.floor(Math.random()*((sesi.length -1)+1))
+    var arr5=str.split('')
+    var rand7=Math.floor(Math.random()*((septini.length -1)+1))
+    var arr5=str.split('')
+    var rand8=Math.floor(Math.random()*((astoni.length -1)+1))
+    
+    </script>
 </body>
 </html>
